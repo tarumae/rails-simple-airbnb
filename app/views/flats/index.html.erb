@@ -1,0 +1,42 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+    <h1>All our flats</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>All <%= @flats.count %> flats.</p>
+    </div>
+  </div>
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-4">
+        <div class="flat-card">
+          <div class="flat-card-content">
+            <div class="flat-card-title">
+              <h4><strong><%= flat.name %></strong></h4>
+            </div>
+            <p><%= flat.address %></p>
+            <div class="flex">
+              <div class="flex">
+                <i class="fas fa-user-friends"></i>
+                <span><%= flat.number_of_guests %></span>
+              </div>
+              <div class="flex ml-3">
+                <i class="fas fa-euro-sign"></i>
+                <span><%= flat.price_per_night %></span>
+              </div>
+            </div>
+          </div>
+          <div class="flat-card-actions">
+            <%= link_to "More info", flat_path(flat)  %>
+            <%= link_to "Edit", edit_flat_path(flat), class: "ml-4 text-warning"  %>
+            <%= link_to "Remove", flat_path(flat), class:"ml-3 text-danger", method: :delete, data: { confirm: "Are you sure you wish to delete this flat?"}   %>
+          </div>
+          </div>
+        </div>
+     <% end %>
+    </div>
+  </div>
+</div>

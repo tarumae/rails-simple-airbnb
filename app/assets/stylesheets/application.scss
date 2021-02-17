@@ -1,0 +1,54 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.flat-card {
+  padding-top: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flat-card-content {
+  padding: 24px;
+}
+
+.flat-card-actions {
+  position: relative;
+  padding: 16px 24px;
+}
+
+span {
+  margin-left: 5px;
+}
+
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+}
+
+.flat-show-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.margin-top-negative {
+  margin-top: -75px;
+}
